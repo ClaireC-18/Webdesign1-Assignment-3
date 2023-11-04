@@ -25,7 +25,7 @@ h2{
 .products,
 .stockist,
 .contact{
-  margin: 15px auto;
+  margin: 33px auto;
   font-family: 'Playfair Display', serif;
   font-size: 20px;
 }
@@ -34,9 +34,15 @@ strong{
   font-size: 30px;
 }
 
+.border{
+  background-image: url(../media/top-view-green-leaves-veed-remove-background.png);
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 133px;
+}
 
 /*Nav Bar div styling*/
-ul {
+nav, ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -69,7 +75,7 @@ li a:hover {
   background-color: #111;
 }
 
-li a:active {
+li a.active {
   background-color: #4b4d4b;
 }
 
@@ -87,7 +93,7 @@ li a:active {
 .story-wrapper {
   margin-top: 100px;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -99,15 +105,19 @@ li a:active {
   position: relative;
   left: calc(-82vw + 40%);
 }
+.story-left img{
+  width: 750px;
+}
 
 .story-left-text{
   width: 60%;
   position: relative;
   left: calc(-50vw + 60%);
+  text-wrap: wrap;
 }
 
 .story-right img{
-width:800px;
+width:700px;
 height:450px;
 }
 
@@ -120,7 +130,8 @@ height:450px;
 .story-right-text{
   width: 60%;
   position: relative;
-  right: calc(-90vw + 60%);
+  right: calc(-94vw + 61%);
+  text-wrap: wrap;
 }
 
 /*Product div styling*/
@@ -236,4 +247,52 @@ height:450px;
 #reason,
 #message{
   width: 400px;
+}
+
+
+/*Footer div styling*/
+
+footer{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 33px auto;
+  font-size: 20px;
+  position: absolute;
+  margin: 0px 0 0 -10px;
+  padding: 10px;
+  background-color: #4b4d4b;
+  color: #ccc;
+}
+
+footer ul{
+  list-style-type: none;
+}
+
+table{
+  width:88%;
+  text-align: center;
+  text-wrap: wrap;
+  table-layout: fixed;
+}
+
+td, th{
+  padding: 5px;
+}
+
+.certifications{
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  left: 88%;
+}
+
+.Product-of-Australia{
+  width: 133px;
 }
