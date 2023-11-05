@@ -6,13 +6,31 @@
         <title>Nectar</title>         
         <link rel="stylesheet" href="css/style.css">                 
     </head>
-    <script>function myFunction(e) {
+    <script>
+    function myFunction(e) {
         var elems = document.querySelectorAll(".active");
         [].forEach.call(elems, function(el) {
           el.classList.remove("active");
         });
         e.target.className = "active";
-      }</script>
+      }
+function myFunction(){
+const form = document.querySelector('form');
+const thankYouMessage = document.querySelector('#thank-you-message');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  thankYouMessage.classList.add('show');
+  form.classList.add('hide');
+ // thankYouMessage.classList.remove('show');
+ // setTimeout(() => form.submit(), 2000);
+  setTimeout(function (i) {
+        thankYouMessage.classList.remove('show'); 
+    form.classList.remove('hide');     
+    },2000);
+    document.querySelector('form').reset();
+});
+}
+</script>
     <body>
         <!--div containing nav bar and links to the page items-->        
             <div class="nectar-logo" id="home">
@@ -218,6 +236,9 @@
             <div class="contact-wrapper">
                 <h2>Contact</h2>
                 <div class="contact-card">
+                    <p id="thank-you-message">
+                        Thank you for contacting us. We will be in touch with you very soon.
+                      </p>
     <form>
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" placeholder="John Doe"><br><br>
@@ -233,7 +254,7 @@
     </select><br><br>
     <label for="message">Message:</label><br>
     <textarea name="message" id="message" rows="10" cols="30" placeholder="Type Message Here....."></textarea><br><br>
-    <input type="submit" aria-label="submit" value="Submit">
+    <input type="submit" aria-label="submit" value="Submit" onclick="myFunction()">
   </form> 
 </div>
 </div>

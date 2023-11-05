@@ -57,6 +57,7 @@ nav, ul{
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 li {
@@ -249,6 +250,20 @@ height:450px;
   width: 400px;
 }
 
+#thank-you-message {
+  display: none;
+}
+
+#thank-you-message.show {
+  display: block;
+}
+
+form{
+  display: block;
+}
+form.hide{
+  display: none;
+}
 
 /*Footer div styling*/
 
