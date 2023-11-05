@@ -6,6 +6,13 @@
         <title>Nectar</title>         
         <link rel="stylesheet" href="css/style.css">                 
     </head>
+    <script>function myFunction(e) {
+        var elems = document.querySelectorAll(".active");
+        [].forEach.call(elems, function(el) {
+          el.classList.remove("active");
+        });
+        e.target.className = "active";
+      }</script>
     <body>
         <!--div containing nav bar and links to the page items-->        
             <div class="nectar-logo" id="home">
@@ -13,11 +20,19 @@
             </div>
 
             <nav>
-                <ul class="nav-list">
+                <ul class="nav-list" onclick="myFunction(event)">
                 <li class="nav-item"><a href="#home">Home</a></li>
+                <!--SVG Repo. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5, 2023. https://www.svgrepo.com/svg/70929/leaf?edit=true.-->
+                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
                 <li class="nav-item"><a href="#story">Our Story</a></li>
+                <!--SVG Repo. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5, 2023. https://www.svgrepo.com/svg/70929/leaf?edit=true.-->
+                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
                 <li class="nav-item"><a href="#products">Product Range</a></li>
+                <!--SVG Repo. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5, 2023. https://www.svgrepo.com/svg/70929/leaf?edit=true.-->
+                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
                 <li class="nav-item"><a href="#stockist">Stockists</a></li>
+                <!--SVG Repo. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5, 2023. https://www.svgrepo.com/svg/70929/leaf?edit=true.-->
+                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
                 <li class="nav-item"><a href="#contact">Contact</a></li>
               </ul>
             </nav>
@@ -61,10 +76,12 @@
             <p>Nectar - Where Flavor Meets Well-Being, and Nature Meets Nurture.</p>
         </div>
             <div class="story-left">
+                <!--Lasthib, Contributors to Wikimedia. “File:2016 Margaret River Australia. Cheeky Monkey Brewery. Brewers of Craft Beers and Ciders.Jpg.” Wikimedia Commons, December 23, 2016. https://commons.wikimedia.org/wiki/File:2016_Margaret_River_Australia._Cheeky_monkey_brewery._Brewers_of_craft_beers_and_ciders.jpg-->
                 <img src="media/2016_Margaret_River_Australia._Cheeky_monkey_brewery._Brewers_of_craft_beers_and_ciders.jpg" alt="Cheeky Monkey Brewery">
             </div>
         </div>
     </div>
+    <!--Div containing border image-->
     <div class="border">
     </div>
         <!--Div containing Product Range-->
@@ -74,6 +91,7 @@
                 <h2>Product Range</h2>
                 <div class="card">
                     <div class="left">
+                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-Lemonade.png" alt="Nectar-Lemonade" height="300">  
                 </div>
                 <div class="right">
@@ -91,6 +109,7 @@
             </div>
                 <div class="card">
                     <div class="left">
+                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
                    <img src="media/Nectar-BloodOrange.png" alt="Nectar-BloodOrange" height="300"> 
                 </div>
                    <div class="right">
@@ -110,6 +129,7 @@
             </div>
                 <div class="card">
                     <div class="left">
+                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-PinkLemonade.png" alt="Nectar-PinkLemonade" height="300">  
                 </div>
                 <div class="right">
@@ -129,6 +149,7 @@
                 </div>
                 <div class="card">
                   <div class="left">
+                    <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-Raspberry.png" alt="Nectar-Raspberry" height="300">
                   </div>
                   <div class="right">
@@ -150,6 +171,7 @@
                 </div>
                 <div class="card">
                     <div class="left">
+                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-Pineapple.png" alt="Nectar-Pineapple" height="300">  
                 </div>
                 <div class="right">
@@ -167,7 +189,7 @@
                 </div>
         </div>
         </div>
-
+<!--Div containing border image-->
         <div class="border">
         </div>
         <!--Div containing stockists-->
@@ -187,7 +209,7 @@
             <div class="logo" id="wildwoods"><img src="media\W&W-Logo.jpg" alt="WILD & WOODS CAFE logo"/></div>
         </div>
     </div>
-
+<!--Div containing border image-->
     <div class="border">
     </div>
         <!--Div containing contact information-->
@@ -254,7 +276,9 @@
         </tr>
     </table>
     <div class="certifications">
+        <!--Wheeler, Mike. “Aus-Qual Certification Body Extends Offering.” Food &amp; Beverage Industry News, December 8, 2019. https://www.foodmag.com.au/aus-qual-certification-body-extends-offering/. -->
 <img src="media\AustralianColour.jpg" alt="Organic logo" height="133" class="Organic">
+<!--Smith, Mary. “Product of Australia.” The Australian Made Campaign. Accessed November 5, 2023. https://australianmade.com.au/. -->
 <img src="media\productofaustralialogo.jpg" alt="Product of Australia logo" class="Product-of-Australia">
 </div>
     </footer>
