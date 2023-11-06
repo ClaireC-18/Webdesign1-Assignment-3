@@ -270,9 +270,9 @@ form.hide{
 footer{
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin: 33px auto;
   font-size: 20px;
