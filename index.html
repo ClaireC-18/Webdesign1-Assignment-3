@@ -1,3 +1,4 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!doctype html>
 <html lang="en">
     <head> 
@@ -6,8 +7,8 @@
         <title>Nectar</title>         
         <link rel="stylesheet" href="css/style.css">                 
     </head>
-    <script>
-    function myFunction(e) {
+    <script type="text/javascript">
+    function active() {
         var elems = document.querySelectorAll(".active");
         [].forEach.call(elems, function(el) {
           el.classList.remove("active");
@@ -26,19 +27,37 @@ form.addEventListener('submit', (e) => {
   setTimeout(function (i) {
         thankYouMessage.classList.remove('show'); 
     form.classList.remove('hide');     
-    },2000);
+    },6000);
     document.querySelector('form').reset();
 });
 }
+
+$(window).on('load', function() {
+  $('.load').delay(3000).fadeOut(1000);
+});
+
 </script>
     <body>
+        <div class="load">
+            <div class="container">
+                <div class="loader">
+                  <div class="loader">
+                    <div class="loader">
+                      <div class="loader">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
         <!--div containing nav bar and links to the page items-->        
             <div class="nectar-logo" id="home">
             <img width="300" src="media/Nectar-Transparent.png" alt="Nectar Logo" class="logo">
             </div>
 
             <nav>
-                <ul class="nav-list" onclick="myFunction(event)">
+                <ul class="nav-list" onclick="active()">
                 <li class="nav-item"><a href="#home">Home</a></li>
                 <!--SVG Repo. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5, 2023. https://www.svgrepo.com/svg/70929/leaf?edit=true.-->
                 <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
@@ -54,7 +73,6 @@ form.addEventListener('submit', (e) => {
                 <li class="nav-item"><a href="#contact">Contact</a></li>
               </ul>
             </nav>
-
 <main>
      <!--Div containing company story-->
      <div class="story" id="story">
@@ -299,12 +317,12 @@ form.addEventListener('submit', (e) => {
     </table>
     <div class="certifications">
         <!--Wheeler, Mike. “Aus-Qual Certification Body Extends Offering.” Food &amp; Beverage Industry News, December 8, 2019. https://www.foodmag.com.au/aus-qual-certification-body-extends-offering/. -->
-<img src="media\AustralianColour.jpg" alt="Organic logo" height="133" class="Organic">
+<img src="media\AustralianColour.jpg" alt="Organic logo" height="133" class="organic">
 <!--Smith, Mary. “Product of Australia.” The Australian Made Campaign. Accessed November 5, 2023. https://australianmade.com.au/. -->
-<img src="media\productofaustralialogo.jpg" alt="Product of Australia logo" class="Product-of-Australia">
+<img src="media\productofaustralialogo.jpg" alt="Product of Australia logo" class="product-of-australia">
 </div>
-<section>
-<p>Nectar&copy; | Terms and Conditions | Privacy Policy</p>
+<section style="height: 40px;">
+<p>Nectar &#174;&#8482; | Terms and Conditions | Privacy Policy</p>
 </section>
 </footer>
  </body> 

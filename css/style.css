@@ -14,6 +14,26 @@
     color: #000000;
     scroll-padding-top: 4rem;
 }
+
+/*Loader styling*/
+.container{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  background: linear-gradient(to right, #7ebfcd 29%, #c0eaf4 59%);
+  z-index: 9999;
+}
+
+.loader{
+  height: 100%;
+  width: 100%;
+  background-image: url(../media/nectar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 h2{
   text-align: center;
   font-family: 'Bodoni Moda', serif;
@@ -308,6 +328,11 @@ td, th{
   left: 88%;
 }
 
-.Product-of-Australia{
+.product-of-australia{
   width: 133px;
+  margin:4px;
+}
+
+.organic{
+margin:4px;
 }
