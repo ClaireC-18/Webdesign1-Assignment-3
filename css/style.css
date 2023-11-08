@@ -336,3 +336,19 @@ td, th{
 .organic{
 margin:4px;
 }
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width 1366px){
+.loader {
+    width: 97%;
+}
+.container {
+    background: linear-gradient(to right, #7ebfcd 29%, #c0eaf4 77%);
+}
+
+@media screen and (max-width 1024px){
+}
+
+@media screen and (max-width 360px){
+}
