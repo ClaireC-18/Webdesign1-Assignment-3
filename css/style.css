@@ -338,17 +338,47 @@ margin:4px;
 }
 
 /*MEDIA QUERIES*/
+/*Desktop Media Query*/
+@media screen and (max-width: 1367px){
 
-@media screen and (max-width 1366px){
-.loader {
-    width: 97%;
-}
 .container {
-    background: linear-gradient(to right, #7ebfcd 29%, #c0eaf4 77%);
+    background: linear-gradient(to right, #7ebfcd 29%, #c0eaf4 71%);
+}
+.story, .products, .stockist, .contact {
+  font-size: 17px;
+}
+strong {
+  font-size: 27px;
+}
+.story-right img {
+  width: 650px !important;
 }
 
-@media screen and (max-width 1024px){
+.story-left {
+  left: calc(-81vw + 41%);
 }
-
-@media screen and (max-width 360px){
+.story-left img {
+  width: 600px;
+}
+.left {
+  left: calc(-24vw + 30%);
+}
+.contact-card {
+  padding: 38px;
+}
+table {
+  font-weight: 700;
+}
+footer{
+  font-weight: 600;
+}
+}
+/*Tablet Media Query*/
+@media screen and (max-width: 1024px){
+  .story-wrapper {
+    flex-wrap: wrap;
+  }
+}
+/*Mobile Media Query*/
+@media screen and (max-width: 360px){
 }
