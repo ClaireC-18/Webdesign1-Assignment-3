@@ -468,6 +468,7 @@ footer{
   width: 90%;
   height: 100%;
   z-index: 19;
+  display:flex;
   justify-content: center;
   align-items: center;
 }
