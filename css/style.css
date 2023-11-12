@@ -62,6 +62,10 @@ strong{
 }
 
 /*Nav Bar div styling*/
+#hamburger-menu{
+  display: none;
+}
+
 nav, ul{
   list-style-type: none;
   margin: 0;
@@ -104,6 +108,47 @@ a.active {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 
 /*Story div styling*/
@@ -373,12 +418,109 @@ footer{
   font-weight: 600;
 }
 }
+
 /*Tablet Media Query*/
 @media screen and (max-width: 1024px){
+  .nav-list {
+    display: none;
+  }
+  #hamburger-menu{
+    display: block;
+    left: 23px;
+    top: 28px;
+    margin: 10px;
+    position: fixed;
+    z-index: 100;
+}
   .story-wrapper {
     flex-wrap: wrap;
   }
+  .story-left-text, .story-right-text{
+    width: 80%;
+    text-wrap: wrap;
+    text-align: center;
+    right: 0;
+    left: 0;
+  }
+  .story-right,.story-left {
+    width: 80%;
+    position: relative;
+    right: 0;
+    left: 0;
 }
+.story-wrapper {
+  justify-content: center;
+  max-width: 100% !important;
+}
+.story-left img {
+  width: 750px;
+}
+.story-right img {
+  width: 725px !important;
+}
+.card {
+  top: 80px;
+}
+.left{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  z-index: 19;
+  justify-content: center;
+  align-items: center;
+}
+.right{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  margin: 0;
+  z-index: 9;
+}
+.card > .left {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.card > .right {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -ms-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.card:hover > .left {
+  opacity: 0;
+}
+
+.card:hover > .right {
+  opacity: 1;
+}
+
+}
+
 /*Mobile Media Query*/
 @media screen and (max-width: 360px){
+  .nav-list {
+    display: none;
+  }
+  #hamburger-menu{
+    display: block;
+    left: 23px;
+    top: 28px;
+    margin: 10px;
+    position: fixed;
+    z-index: 100;
+}
+
 }
