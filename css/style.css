@@ -352,6 +352,10 @@ footer ul{
   list-style-type: none;
 }
 
+.mobile-table{
+  display: none;
+}
+
 table{
   width:88%;
   text-align: center;
@@ -474,7 +478,7 @@ footer{
 }
 .right{
   position: absolute;
-  left: 0;
+  left: 50px;
   top: 0;
   width: 90%;
   height: 100%;
@@ -508,6 +512,26 @@ footer{
   opacity: 1;
 }
 
+.contact-card {
+  padding: 37px;
+}
+.certifications {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  left: 88%;
+  align-content: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper {
+  margin-top: 100px;
+  max-width: 74%;
+  margin: 0 auto;
+}
 }
 
 /*Mobile Media Query*/
@@ -523,5 +547,77 @@ footer{
     position: fixed;
     z-index: 100;
 }
+h2 {
+  font-size: 35px;
+}
 
+strong {
+  font-size: 20px;
+}
+
+.story, .products, .stockist, .contact {
+  font-size: 14px;
+}
+
+.story-right img {
+  width: 260px !important;
+  height: auto;
+}
+
+.story-left img {
+  width: 280px;
+  height: auto;
+}
+
+#coles img {
+  height: 100px !important;
+}
+.logo img {
+  width: 215px;
+  height: auto;
+}
+
+#name, #email, #reason, #message {
+  width: 250px;
+}
+
+.card {
+  width: 80%;
+}
+
+.border {
+  height: 100px;
+}
+.story-right, .story-left {
+  width: 90%;
+}
+
+.card h2 {
+  text-transform: none !important;
+  font-size: 25px;
+}
+
+.right {
+  width: 90%;
+  left: 20px;
+  font-size: 12px;
+}
+
+.left {
+  width: 80%;
+}
+table {
+  width: 88%;
+  font-size: 12px;
+}
+.mobile-table{
+  display: block;
+}
+.standard-table{
+  display: none;
+}
+
+td{
+  width:50%;
+}
 }
