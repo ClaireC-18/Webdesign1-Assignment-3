@@ -539,8 +539,7 @@ footer{
 /*Mobile Media Query*/
 @media screen 
   and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4){
+  and (device-height: 640px){
   .container {
     background: linear-gradient(to right, #7ebfcd 31%, #c0eaf4 79%);
 }
