@@ -5,15 +5,6 @@
   }
   @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Indie+Flower&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
-/*Page styling*/
-  html, body{
-    background: linear-gradient(to right, #7ebfcd 10%, #c0eaf4 90%);
-    background-repeat:no-repeat;
-    font-family: 'AvenirNext-UltraLight';
-    scroll-behavior: smooth;
-    color: #000000;
-    scroll-padding-top: 4rem;
-}
 
 /*Loader styling*/
 .container{
@@ -32,6 +23,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+/*Page styling*/
+  html, body{
+    background: linear-gradient(to right, #7ebfcd 10%, #c0eaf4 90%);
+    background-repeat:no-repeat;
+    font-family: 'AvenirNext-UltraLight';
+    scroll-behavior: smooth;
+    color: #000000;
+    scroll-padding-top: 4rem;
 }
 
 h2{
@@ -62,10 +63,6 @@ strong{
 }
 
 /*Nav Bar div styling*/
-#hamburger-menu{
-  display: none;
-}
-
 nav, ul{
   list-style-type: none;
   margin: 0;
@@ -108,6 +105,11 @@ a.active {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/*Hamburger menu styling*/
+#hamburger-menu{
+  display: none;
 }
 
 .overlay {
@@ -315,7 +317,7 @@ height:450px;
 #message{
   width: 400px;
 }
-
+/*On submittion the user will be presented a tank you message that will time out after 6 seconds*/
 #thank-you-message {
   display: none;
 }
@@ -323,7 +325,7 @@ height:450px;
 #thank-you-message.show {
   display: block;
 }
-
+/*Form will disappear while the thank you message appears and will reappear after 6 seconds*/
 form{
   display: block;
 }
@@ -332,7 +334,6 @@ form.hide{
 }
 
 /*Footer div styling*/
-
 footer{
   display: inline-flex;
   flex-direction: row;
@@ -427,9 +428,13 @@ footer{
 
 /*Tablet Media Query*/
 @media screen and (max-width: 1024px){
-  .nav-list {
-    display: none;
-  }
+
+/*hides the original nav menu*/
+.nav-list {
+  display: none;
+}
+
+/*shows new hamburger style menu*/
   #hamburger-menu{
     display: block;
     left: 23px;
@@ -488,6 +493,8 @@ footer{
   margin: 0;
   z-index: 9;
 }
+
+/*Creates new visual by having the product can as the first image and on click/hover the card transitions to how text about the product*/
 .card > .left {
   opacity: 1;
   -webkit-transition: opacity 500ms ease-in-out;
@@ -517,6 +524,7 @@ footer{
 .contact-card {
   padding: 37px;
 }
+
 .certifications {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -544,9 +552,12 @@ footer{
     background: linear-gradient(to right, #7ebfcd 31%, #c0eaf4 79%);
 }
 
+/*hides the original nav menu*/
   .nav-list {
     display: none;
   }
+
+  /*shows new hamburger style menu*/
   #hamburger-menu{
     display: block;
     left: 10px;
@@ -630,9 +641,13 @@ table {
   width: 50%;
   font-size: 12px;
 }
+
+/*shows mobile footer table*/
 .mobile-table{
   display: block;
 }
+
+/*Hides original footer table*/
 .standard-table{
   display: none;
 }

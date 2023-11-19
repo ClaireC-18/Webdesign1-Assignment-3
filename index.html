@@ -7,7 +7,8 @@
         <title>Nectar</title>         
         <link rel="stylesheet" href="css/style.css">                 
     </head>
-    <script type="text/javascript">
+<script type="text/javascript">
+    //function to keep the active nav menu item highlighted 
     function active() {
         var elems = document.querySelectorAll(".active");
         [].forEach.call(elems, function(el) {
@@ -15,6 +16,8 @@
         });
         e.target.className = "active";
       }
+
+//On submition of contact form a thank you message will appear for 6 seconds before reverting back to show a reset form
 function myFunction(){
 const form = document.querySelector('form');
 const thankYouMessage = document.querySelector('#thank-you-message');
@@ -32,14 +35,17 @@ form.addEventListener('submit', (e) => {
 });
 }
 
+//Script to timeout the initial screen loader.
 $(window).on('load', function() {
   $('.load').delay(3000).fadeOut(1000);
 });
 
+//function to open the hamburger menu
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
 }
 
+//function to close the hamburger menu
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
@@ -150,7 +156,7 @@ function closeNav() {
                 <h2>Product Range</h2>
                 <div class="card">
                     <figure class="left">
-                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
+                        <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-Lemonade.png" alt="Nectar-Lemonade" height="300">  
                 </figure>
                 <article class="right">
@@ -168,7 +174,7 @@ function closeNav() {
             </div>
                 <div class="card">
                     <figure class="left">
-                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
+                        <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
                    <img src="media/Nectar-BloodOrange.png" alt="Nectar-BloodOrange" height="300"> 
                 </figure>
                    <article class="right">
@@ -188,7 +194,7 @@ function closeNav() {
             </div>
                 <div class="card">
                     <figure class="left">
-                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
+                        <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-PinkLemonade.png" alt="Nectar-PinkLemonade" height="300">  
                 </figure>
                 <article class="right">
@@ -208,7 +214,7 @@ function closeNav() {
                 </div>
                 <div class="card">
                   <figure class="left">
-                    <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
+                    <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-Raspberry.png" alt="Nectar-Raspberry" height="300">
                   </figure>
                   <article class="right">
@@ -230,7 +236,7 @@ function closeNav() {
                 </div>
                 <div class="card">
                     <figure class="left">
-                        <!--Image created by claire Banville, lable created on Canva and added to can stock image through photoshop-->
+                        <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
                   <img src="media/Nectar-Pineapple.png" alt="Nectar-Pineapple" height="300">  
                 </figure>
                 <article class="right">
@@ -295,6 +301,7 @@ function closeNav() {
     </select><br><br>
     <label for="message">Message:</label><br>
     <textarea name="message" id="message" rows="10" cols="30" placeholder="Type Message Here....."></textarea><br><br>
+    <!--On submition of contact form a thank you message will appear for 6 seconds before reverting back to show a reset form-->
     <input type="submit" aria-label="submit" value="Submit" onclick="myFunction()">
   </form> 
 </div>
@@ -341,7 +348,7 @@ function closeNav() {
         </tr>
        </tbody>
     </table>
-
+<!--Footer table updated for mobile perspective to make it more compact and less noisy for smaller screens-->
     <div class="mobile-table">
         <details>
             <summary>Stockists</summary>
