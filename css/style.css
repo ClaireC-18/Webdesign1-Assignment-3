@@ -138,6 +138,7 @@ a.active {
   color: #818181;
   display: block;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -365,6 +366,7 @@ table{
 
 td, th{
   padding: 5px;
+  color: #ccc;
 }
 
 .certifications{
@@ -536,13 +538,17 @@ footer{
 
 /*Mobile Media Query*/
 @media screen and (max-width: 360px){
+  .container {
+    background: linear-gradient(to right, #7ebfcd 31%, #c0eaf4 79%);
+}
+
   .nav-list {
     display: none;
   }
   #hamburger-menu{
     display: block;
-    left: 23px;
-    top: 28px;
+    left: 10px;
+    top: 20px;
     margin: 10px;
     position: fixed;
     z-index: 100;
@@ -577,12 +583,9 @@ strong {
   height: auto;
 }
 
-#name, #email, #reason, #message {
-  width: 250px;
-}
-
 .card {
   width: 80%;
+  height: 415px;
 }
 
 .border {
@@ -600,14 +603,29 @@ strong {
 .right {
   width: 90%;
   left: 20px;
-  font-size: 12px;
+  font-size: 12.5px;
 }
 
 .left {
   width: 80%;
 }
+
+.contact-wrapper {
+  margin-top: 100px;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+#name, #email, #reason, #message {
+  width: 200px;
+}
+
+.contact-card {
+  padding: 25px;
+}
+
 table {
-  width: 88%;
+  width: 50%;
   font-size: 12px;
 }
 .mobile-table{
@@ -617,7 +635,20 @@ table {
   display: none;
 }
 
-td{
-  width:50%;
+.product-of-australia {
+  width: 113px;
+  margin: 4px;
 }
+.organic{
+  height:100px;
+}
+
+footer{
+  font-size: 13px;
+}
+
+details{
+  text-align: left;
+}
+
 }
