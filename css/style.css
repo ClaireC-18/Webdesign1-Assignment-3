@@ -1,13 +1,13 @@
 /*Font downloaded from <div>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>*/
 @font-face {
-    font-family: 'AvenirNext-UltraLight';
-    src: url('/fonts/AvenirNext-UltraLight.ttf')  format('truetype');
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Indie+Flower&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+  font-family: "AvenirNext-UltraLight";
+  src: url("/fonts/AvenirNext-UltraLight.ttf") format("truetype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
 
 /*Loader styling*/
-.container{
+.container {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -16,7 +16,7 @@
   z-index: 9999;
 }
 
-.loader{
+.loader {
   height: 100%;
   width: 100%;
   background-image: url(../media/nectar.png);
@@ -26,18 +26,19 @@
 }
 
 /*Page styling*/
-  html, body{
-    background: linear-gradient(to right, #7ebfcd 10%, #c0eaf4 90%);
-    background-repeat:no-repeat;
-    font-family: 'AvenirNext-UltraLight';
-    scroll-behavior: smooth;
-    color: #000000;
-    scroll-padding-top: 4rem;
+html,
+body {
+  background: linear-gradient(to right, #7ebfcd 10%, #c0eaf4 90%);
+  background-repeat: no-repeat;
+  font-family: "AvenirNext-UltraLight";
+  scroll-behavior: smooth;
+  color: #000000;
+  scroll-padding-top: 4rem;
 }
 
-h2{
+h2 {
   text-align: center;
-  font-family: 'Bodoni Moda', serif;
+  font-family: "Bodoni Moda", serif;
   text-transform: uppercase;
   font-size: 50px;
 }
@@ -45,17 +46,17 @@ h2{
 .story,
 .products,
 .stockist,
-.contact{
+.contact {
   margin: 33px auto;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 20px;
 }
 
-strong{
+strong {
   font-size: 30px;
 }
 
-.border{
+.border {
   background-image: url(../media/top-view-green-leaves-veed-remove-background.png);
   background-repeat: repeat-x;
   width: 100%;
@@ -63,7 +64,8 @@ strong{
 }
 
 /*Nav Bar div styling*/
-nav, ul{
+nav,
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -73,12 +75,12 @@ nav, ul{
   top: 0;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
-  z-index:100;
+  z-index: 100;
   display: inline-flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 li {
@@ -101,14 +103,14 @@ a.active {
   background-color: #4b4d4b;
 }
 
-.nectar-logo img{
+.nectar-logo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 /*Hamburger menu styling*/
-#hamburger-menu{
+#hamburger-menu {
   display: none;
 }
 
@@ -119,8 +121,8 @@ a.active {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -143,7 +145,8 @@ a.active {
   font-weight: 600;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #f1f1f1;
 }
 
@@ -155,7 +158,7 @@ a.active {
 }
 
 /*Story div styling*/
-.story{
+.story {
   max-width: 90%;
 }
 
@@ -164,39 +167,39 @@ a.active {
   max-width: 90%;
   margin: 30px auto;
   display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
-.story-left{
+.story-left {
   width: 40%;
   position: relative;
   left: calc(-82vw + 40%);
 }
-.story-left img{
+.story-left img {
   width: 750px;
 }
 
-.story-left-text{
+.story-left-text {
   width: 60%;
   position: relative;
   left: calc(-50vw + 60%);
   text-wrap: wrap;
 }
 
-.story-right img{
-width:700px;
-height:450px;
+.story-right img {
+  width: 700px;
+  height: 450px;
 }
 
-.story-right{
+.story-right {
   width: 40%;
   position: relative;
   right: calc(-32vw + 40%);
 }
 
-.story-right-text{
+.story-right-text {
   width: 60%;
   position: relative;
   right: calc(-94vw + 61%);
@@ -224,71 +227,71 @@ height:450px;
   align-items: center;
   height: 500px;
   width: 90%;
-  
+
   h2 {
-    padding: 0;
+      padding: 0;
   }
 
   span {
-    display: block;
-    font-size: 14px;
-    color: #0c4eb9;
+      display: block;
+      font-size: 14px;
+      color: #0c4eb9;
   }
 }
 
-.card h2{
+.card h2 {
   text-transform: none !important;
   font-size: 40px;
 }
 
 @for $i from 1 through 8 {
   .card:nth-child(#{$i}n) {
-    top: $i * 20px;
+      top: $i * 20px;
   }
 }
 
-.left{
+.left {
   width: 30%;
   position: relative;
   left: calc(-20vw + 30%);
 }
-.right{
+.right {
   width: 70%;
   position: relative;
   right: calc(-50vw + 70%);
 }
 
-.left img{
-  transition: transform .8s;
+.left img {
+  transition: transform 0.8s;
 }
 
-.left img:hover{
+.left img:hover {
   -ms-transform: scale(1.3); /* IE 9 */
   -webkit-transform: scale(1.3); /* Safari 3-8 */
-  transform: scale(1.3); 
+  transform: scale(1.3);
 }
 
 /*Stockist div styling*/
-.stockists{
+.stockists {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin:auto;
+  margin: auto;
 }
 
-.logo img{
+.logo img {
   height: 400px;
   width: 400px;
   padding: 40px;
 }
 
 #whiteelephant img,
-#wildwoods img{
+#wildwoods img {
   border-radius: 50%;
 }
 
-#coles img{
+#coles img {
   height: 150px !important;
 }
 
@@ -311,19 +314,19 @@ height:450px;
   margin-bottom: 20px;
 }
 
-#name, 
+#name,
 #email,
 #reason,
-#message{
+#message {
   width: 400px;
 }
 
-#submit{
+#submit {
   background: linear-gradient(45deg, #ededed, #bdbdbd);
   border-radius: 10px;
   width: 150px;
   height: 30px;
-  font-family: 'AvenirNext-UltraLight';
+  font-family: "AvenirNext-UltraLight";
   font-size: 18px;
   font-weight: 600;
 }
@@ -337,15 +340,15 @@ height:450px;
   display: block;
 }
 /*Form will disappear while the thank you message appears and will reappear after 6 seconds*/
-form{
+form {
   display: block;
 }
-form.hide{
+form.hide {
   display: none;
 }
 
 /*Footer div styling*/
-footer{
+footer {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -361,27 +364,28 @@ footer{
   color: #ccc;
 }
 
-footer ul{
+footer ul {
   list-style-type: none;
 }
 
-.mobile-table{
+.mobile-table {
   display: none;
 }
 
-table{
-  width:88%;
+table {
+  width: 88%;
   text-align: center;
   text-wrap: wrap;
   table-layout: fixed;
 }
 
-td, th{
+td,
+th {
   padding: 5px;
   color: #ccc;
 }
 
-.certifications{
+.certifications {
   display: inline-flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -391,292 +395,299 @@ td, th{
   left: 88%;
 }
 
-.product-of-australia{
+.product-of-australia {
   width: 133px;
-  margin:4px;
+  margin: 4px;
 }
 
-.organic{
-margin:4px;
+.organic {
+  margin: 4px;
 }
 
 /*MEDIA QUERIES*/
 /*Desktop Media Query*/
-@media screen and (max-width: 1367px){
+@media screen and (max-width: 1367px) {
+  .container {
+      background: linear-gradient(to right, #7ebfcd 29%, #c0eaf4 71%);
+  }
+  .story,
+  .products,
+  .stockist,
+  .contact {
+      font-size: 17px;
+  }
+  strong {
+      font-size: 27px;
+  }
+  .story-right img {
+      width: 650px !important;
+  }
 
-.container {
-    background: linear-gradient(to right, #7ebfcd 29%, #c0eaf4 71%);
-}
-.story, .products, .stockist, .contact {
-  font-size: 17px;
-}
-strong {
-  font-size: 27px;
-}
-.story-right img {
-  width: 650px !important;
-}
-
-.story-left {
-  left: calc(-81vw + 41%);
-}
-.story-left img {
-  width: 600px;
-}
-.left {
-  left: calc(-24vw + 30%);
-}
-.contact-card {
-  padding: 38px;
-}
-table {
-  font-weight: 700;
-}
-footer{
-  font-weight: 600;
-}
+  .story-left {
+      left: calc(-81vw + 41%);
+  }
+  .story-left img {
+      width: 600px;
+  }
+  .left {
+      left: calc(-24vw + 30%);
+  }
+  .contact-card {
+      padding: 38px;
+  }
+  table {
+      font-weight: 700;
+  }
+  footer {
+      font-weight: 600;
+  }
 }
 
 /*Tablet Media Query*/
-@media screen and (max-width: 1024px){
-
-/*hides the original nav menu*/
-.nav-list {
-  display: none;
-}
-
-/*shows new hamburger style menu*/
-  #hamburger-menu{
-    display: block;
-    left: 23px;
-    top: 28px;
-    margin: 10px;
-    position: fixed;
-    z-index: 100;
-}
-  .story-wrapper {
-    flex-wrap: wrap;
-  }
-  .story-left-text, .story-right-text{
-    width: 80%;
-    text-wrap: wrap;
-    text-align: center;
-    right: 0;
-    left: 0;
-  }
-  .story-right,.story-left {
-    width: 80%;
-    position: relative;
-    right: 0;
-    left: 0;
-}
-.story-wrapper {
-  justify-content: center;
-  max-width: 100% !important;
-}
-.story-left img {
-  width: 750px;
-}
-.story-right img {
-  width: 725px !important;
-}
-.card {
-  top: 80px;
-}
-.left{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 90%;
-  height: 100%;
-  z-index: 19;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-.right{
-  position: absolute;
-  left: 50px;
-  top: 0;
-  width: 90%;
-  height: 100%;
-  background-color: white;
-  margin: 0;
-  z-index: 9;
-}
-
-/*Creates new visual by having the product can as the first image and on click/hover the card transitions to how text about the product*/
-.card > .left {
-  opacity: 1;
-  -webkit-transition: opacity 500ms ease-in-out;
-  -moz-transition: opacity 500ms ease-in-out;
-  -ms-transition: opacity 500ms ease-in-out;
-  -o-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
-}
-
-.card > .right {
-  opacity: 0;
-  -webkit-transition: opacity 500ms ease-in-out;
-  -moz-transition: opacity 500ms ease-in-out;
-  -ms-transition: opacity 500ms ease-in-out;
-  -o-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
-}
-
-.card:hover > .left {
-  opacity: 0;
-}
-
-.card:hover > .right {
-  opacity: 1;
-}
-
-.contact-card {
-  padding: 37px;
-}
-
-.certifications {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  left: 88%;
-  align-content: center;
-  flex-direction: row;
-  width: 100%;
-  padding: 10px;
-}
-
-.wrapper {
-  margin-top: 100px;
-  max-width: 74%;
-  margin: 0 auto;
-}
-}
-
-/*Mobile Media Query*/
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px){
-  .container {
-    background: linear-gradient(to right, #7ebfcd 31%, #c0eaf4 79%);
-}
-
-/*hides the original nav menu*/
+@media screen and (max-width: 1024px) {
+  /*hides the original nav menu*/
   .nav-list {
-    display: none;
+      display: none;
   }
 
   /*shows new hamburger style menu*/
-  #hamburger-menu{
-    display: block;
-    left: 10px;
-    top: 20px;
-    margin: 10px;
-    position: fixed;
-    z-index: 100;
-}
-h2 {
-  font-size: 35px;
+  #hamburger-menu {
+      display: block;
+      left: 23px;
+      top: 28px;
+      margin: 10px;
+      position: fixed;
+      z-index: 100;
+  }
+  .story-wrapper {
+      flex-wrap: wrap;
+  }
+  .story-left-text,
+  .story-right-text {
+      width: 80%;
+      text-wrap: wrap;
+      text-align: center;
+      right: 0;
+      left: 0;
+  }
+  .story-right,
+  .story-left {
+      width: 80%;
+      position: relative;
+      right: 0;
+      left: 0;
+  }
+  .story-wrapper {
+      justify-content: center;
+      max-width: 100% !important;
+  }
+  .story-left img {
+      width: 750px;
+  }
+  .story-right img {
+      width: 725px !important;
+  }
+  .card {
+      top: 80px;
+  }
+  .left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 90%;
+      height: 100%;
+      z-index: 19;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .right {
+      position: absolute;
+      left: 50px;
+      top: 0;
+      width: 90%;
+      height: 100%;
+      background-color: white;
+      margin: 0;
+      z-index: 9;
+  }
+
+  /*Creates new visual by having the product can as the first image and on click/hover the card transitions to how text about the product*/
+  .card > .left {
+      opacity: 1;
+      -webkit-transition: opacity 500ms ease-in-out;
+      -moz-transition: opacity 500ms ease-in-out;
+      -ms-transition: opacity 500ms ease-in-out;
+      -o-transition: opacity 500ms ease-in-out;
+      transition: opacity 500ms ease-in-out;
+  }
+
+  .card > .right {
+      opacity: 0;
+      -webkit-transition: opacity 500ms ease-in-out;
+      -moz-transition: opacity 500ms ease-in-out;
+      -ms-transition: opacity 500ms ease-in-out;
+      -o-transition: opacity 500ms ease-in-out;
+      transition: opacity 500ms ease-in-out;
+  }
+
+  .card:hover > .left {
+      opacity: 0;
+  }
+
+  .card:hover > .right {
+      opacity: 1;
+  }
+
+  .contact-card {
+      padding: 37px;
+  }
+
+  .certifications {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: stretch;
+      left: 88%;
+      align-content: center;
+      flex-direction: row;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .wrapper {
+      margin-top: 100px;
+      max-width: 74%;
+      margin: 0 auto;
+  }
 }
 
-strong {
-  font-size: 20px;
-}
+/*Mobile Media Query*/
+@media screen and (device-width: 360px) and (device-height: 640px) {
+  .container {
+      background: linear-gradient(to right, #7ebfcd 31%, #c0eaf4 79%);
+  }
 
-.story, .products, .stockist, .contact {
-  font-size: 14px;
-}
+  /*hides the original nav menu*/
+  .nav-list {
+      display: none;
+  }
 
-.story-right img {
-  width: 260px !important;
-  height: auto;
-}
+  /*shows new hamburger style menu*/
+  #hamburger-menu {
+      display: block;
+      left: 10px;
+      top: 20px;
+      margin: 10px;
+      position: fixed;
+      z-index: 100;
+  }
+  h2 {
+      font-size: 35px;
+  }
 
-.story-left img {
-  width: 280px;
-  height: auto;
-}
+  strong {
+      font-size: 20px;
+  }
 
-#coles img {
-  height: 100px !important;
-}
-.logo img {
-  width: 215px;
-  height: auto;
-}
+  .story,
+  .products,
+  .stockist,
+  .contact {
+      font-size: 14px;
+  }
 
-.card {
-  width: 80%;
-  height: 415px;
-}
+  .story-right img {
+      width: 260px !important;
+      height: auto;
+  }
 
-.border {
-  height: 100px;
-}
-.story-right, .story-left {
-  width: 90%;
-}
+  .story-left img {
+      width: 280px;
+      height: auto;
+  }
 
-.card h2 {
-  text-transform: none !important;
-  font-size: 25px;
-}
+  #coles img {
+      height: 100px !important;
+  }
+  .logo img {
+      width: 215px;
+      height: auto;
+  }
 
-.right {
-  width: 90%;
-  left: 20px;
-  font-size: 12.5px;
-}
+  .card {
+      width: 80%;
+      height: 415px;
+  }
 
-.left {
-  width: 80%;
-}
+  .border {
+      height: 100px;
+  }
+  .story-right,
+  .story-left {
+      width: 90%;
+  }
 
-.contact-wrapper {
-  margin-top: 100px;
-  max-width: 260px;
-  margin: 0 auto;
-}
+  .card h2 {
+      text-transform: none !important;
+      font-size: 25px;
+  }
 
-#name, #email, #reason, #message {
-  width: 200px;
-}
+  .right {
+      width: 90%;
+      left: 20px;
+      font-size: 12.5px;
+  }
 
-.contact-card {
-  padding: 25px;
-}
+  .left {
+      width: 80%;
+  }
 
-table {
-  width: 50%;
-  font-size: 12px;
-}
+  .contact-wrapper {
+      margin-top: 100px;
+      max-width: 260px;
+      margin: 0 auto;
+  }
 
-/*shows mobile footer table*/
-.mobile-table{
-  display: block;
-}
+  #name,
+  #email,
+  #reason,
+  #message {
+      width: 200px;
+  }
 
-/*Hides original footer table*/
-.standard-table{
-  display: none;
-}
+  .contact-card {
+      padding: 25px;
+  }
 
-.product-of-australia {
-  width: 113px;
-  margin: 4px;
-}
-.organic{
-  height:100px;
-}
+  table {
+      width: 50%;
+      font-size: 12px;
+  }
 
-footer{
-  font-size: 13px;
-}
+  /*shows mobile footer table*/
+  .mobile-table {
+      display: block;
+  }
 
-details{
-  text-align: left;
-}
+  /*Hides original footer table*/
+  .standard-table {
+      display: none;
+  }
 
+  .product-of-australia {
+      width: 113px;
+      margin: 4px;
+  }
+  .organic {
+      height: 100px;
+  }
+
+  footer {
+      font-size: 13px;
+  }
+
+  details {
+      text-align: left;
+  }
 }

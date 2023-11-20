@@ -1,154 +1,145 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!doctype html>
 <html lang="en">
-    <head> 
-        <meta charset="utf-8">     
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nectar</title>         
-        <link rel="stylesheet" href="css/style.css">                 
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nectar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <script type="text/javascript">
     //function to keep the active nav menu item highlighted 
     function active() {
         var elems = document.querySelectorAll(".active");
         [].forEach.call(elems, function(el) {
-          el.classList.remove("active");
+            el.classList.remove("active");
         });
         e.target.className = "active";
-      }
-
-//On submition of contact form a thank you message will appear for 6 seconds before reverting back to show a reset form
-function myFunction(){
-const form = document.querySelector('form');
-const thankYouMessage = document.querySelector('#thank-you-message');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  thankYouMessage.classList.add('show');
-  form.classList.add('hide');
- // thankYouMessage.classList.remove('show');
- // setTimeout(() => form.submit(), 2000);
-  setTimeout(function (i) {
-        thankYouMessage.classList.remove('show'); 
-    form.classList.remove('hide');     
-    },6000);
-    document.querySelector('form').reset();
-});
-}
-
-//Script to timeout the initial screen loader.
-$(window).on('load', function() {
-  $('.load').delay(3000).fadeOut(1000);
-});
-
-//function to open the hamburger menu
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-//function to close the hamburger menu
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
+    }
+    //On submition of contact form a thank you message will appear for 6 seconds before reverting back to show a reset form
+    function myFunction() {
+        const form = document.querySelector('form');
+        const thankYouMessage = document.querySelector('#thank-you-message');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            thankYouMessage.classList.add('show');
+            form.classList.add('hide');
+            // thankYouMessage.classList.remove('show');
+            // setTimeout(() => form.submit(), 2000);
+            setTimeout(function(i) {
+                thankYouMessage.classList.remove('show');
+                form.classList.remove('hide');
+            }, 6000);
+            document.querySelector('form').reset();
+        });
+    }
+    //Script to timeout the initial screen loader.
+    $(window).on('load', function() {
+        $('.load').delay(3000).fadeOut(1000);
+    });
+    //function to open the hamburger menu
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+    //function to close the hamburger menu
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
 </script>
-    <body>
-        <div class="load">
-            <div class="container">
+
+<body>
+    <div class="load">
+        <div class="container">
+            <div class="loader">
                 <div class="loader">
-                  <div class="loader">
                     <div class="loader">
-                      <div class="loader">
+                        <div class="loader">
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div> 
-
-        <!--div containing nav bar and links to the page items-->        
-            <div class="nectar-logo" id="home">
-            <img width="300" src="media/Nectar-Transparent.png" alt="Nectar Logo" class="logo">
             </div>
-
-            <nav>
-                <ul class="nav-list" onclick="active()">
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
-                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
-                <li class="nav-item"><a href="#story">Our Story</a></li>
-                <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
-                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
-                <li class="nav-item"><a href="#products">Product Range</a></li>
-                <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
-                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
-                <li class="nav-item"><a href="#stockist">Stockists</a></li>
-                <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
-                <li><div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div></li>
-                <li class="nav-item"><a href="#contact">Contact</a></li>
-              </ul>
-            </nav>
-
-            <!--Tablet and Mobile Navigation | Hamburger style menu-->
-            <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-content">
-                    <a href="# home" onclick="closeNav()">Home</a>
-                    <a href="#story" onclick="closeNav()">Our Story</a>
-                    <a href="#products" onclick="closeNav()">Product Range</a>
-                    <a href="#stockist" onclick="closeNav()">Stockists</a>
-                    <a href="#contact" onclick="closeNav()">Contact</a>
-                </div>
-              </div>
-              <!--“☰.” 2023. HTML Symbols. Accessed November 17. https://www.htmlsymbols.xyz/unicode/U+2630. -->
-              <span id="hamburger-menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-<main>
-     <!--Div containing company story-->
-     <div class="story" id="story">
-        <h2>Our Story</h2>
-        <div class="story-wrapper">
-        <article class="story-left-text">
-        <strong>About Us - Nectar: Where Flavor Meets Well-Being</strong>
-            <p>At Nectar, we've embarked on a journey to redefine refreshment. We've crafted a unique line of beverages that combine the subtle sweetness of nature with the goodness of hemp extract and adaptogens. Our mission is to create a drink that not only tantalizes your taste buds but also nurtures your well-being, all while embodying the vibrant energy of Western Australia's sunny lifestyle.</p>
-          
-        <strong>Our Story</strong>
-       
-           <p>Born amidst the picturesque landscapes of Margaret River, Western Australia, Nectar drinks are the embodiment of a vision to provide a refreshing and health-conscious option for our local community. We've dedicated ourselves to perfecting every sip, ensuring that you experience a sense of calm and rejuvenation with each bottle.</p>
-          
-        <strong>Beyond Beverages</strong>
-       
-           <p>Our commitment extends beyond crafting the perfect beverage. It's about connecting with our community. While you won't find Nectar products available for purchase on our website (they're readily available at your favorite local supermarkets and cafes), this space serves as a hub of information and inspiration. It's where you can delve deeper into our story, discover the secrets behind our delightful flavors, and immerse yourself in the lifestyle Nectar embodies.</p>
-       
-        </article>  
-        <figure class="story-right">
-            <!--Kaboompics, Karolina /. 2019. “Download Premium Image of Sun Shining on the Lemon Tree by Karolina / Kaboompics about Lemon, Summer, Yellow, Citrus, and Agriculture 937559.” Rawpixel. https://www.rawpixel.com/image/937559/lemon-orchard.  -->
-            <img src="media/Lemon-Orchard.jpg" alt="Fruit Orchard">
-        </figure>
-    </div>
-    <div class="story-wrapper">
-        <article class="story-right-text">
-        <strong>The Nectar Experience</strong>
-         
-            <p>As you explore our website, you'll notice the embodiment of our brand's tone of voice in every design element. The vibrant and youthful energy of Western Australia is seamlessly integrated into the website's look and feel. We aim to provide a professional and reliable image, assuring our visitors that Nectar is a brand they can trust.</p>
-    
-        <strong>Setting Ourselves Apart</strong>
-     
-            <p>In the crowded market of healthy beverages, what sets us apart is our unwavering commitment to delivering a product that doesn't just quench your thirst but elevates your overall well-being. Our website features captivating imagery that reflects our unique blend of natural ingredients and the sunny, lively spirit of WA.</p>
-              
-            <strong>Join the Nectar Community</strong><br>
-       
-            <p>Whether you're a loyal fan or just discovering us for the first time, our website offers the perfect blend of visuals and textual content to provide you with the information you need. We invite you to explore, learn, and become a part of the Nectar community.</p>
-     
-            <p>Nectar - Where Flavor Meets Well-Being, and Nature Meets Nurture.</p>
-        </article>
-            <figure class="story-left">
-                <!--Lasthib, Contributors to Wikimedia. 2016. “File:2016 Margaret River Australia. Cheeky Monkey Brewery. Brewers of Craft Beers and Ciders.Jpg.” Wikimedia Commons. Wikimedia Foundation, Inc. December 23. https://commons.wikimedia.org/wiki/File:2016_Margaret_River_Australia._Cheeky_monkey_brewery._Brewers_of_craft_beers_and_ciders.jpg. -->
-                <img src="media/2016_Margaret_River_Australia._Cheeky_monkey_brewery._Brewers_of_craft_beers_and_ciders.jpg" alt="Cheeky Monkey Brewery">
-            </figure>
         </div>
     </div>
-    <!--Div containing border image-->
-    <div class="border">
+    <!--div containing nav bar and links to the page items-->
+    <div class="nectar-logo" id="home">
+        <img width="300" src="media/Nectar-Transparent.png" alt="Nectar Logo" class="logo">
     </div>
+    <nav>
+        <ul class="nav-list" onclick="active()">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
+            <li>
+                <div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div>
+            </li>
+            <li class="nav-item"><a href="#story">Our Story</a></li>
+            <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
+            <li>
+                <div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div>
+            </li>
+            <li class="nav-item"><a href="#products">Product Range</a></li>
+            <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
+            <li>
+                <div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div>
+            </li>
+            <li class="nav-item"><a href="#stockist">Stockists</a></li>
+            <!--SVG Repo. 2023. “Leaf Vector Svg Icon.” SVG Repo. Accessed November 5. https://www.svgrepo.com/svg/70929/leaf. -->
+            <li>
+                <div><img src="media\leaf-svgrepo-com-small.svg" alt="leaf seperator" height="20"></div>
+            </li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!--Tablet and Mobile Navigation | Hamburger style menu-->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="# home" onclick="closeNav()">Home</a>
+            <a href="#story" onclick="closeNav()">Our Story</a>
+            <a href="#products" onclick="closeNav()">Product Range</a>
+            <a href="#stockist" onclick="closeNav()">Stockists</a>
+            <a href="#contact" onclick="closeNav()">Contact</a>
+        </div>
+    </div>
+    <!--“☰.” 2023. HTML Symbols. Accessed November 17. https://www.htmlsymbols.xyz/unicode/U+2630. -->
+    <span id="hamburger-menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <main>
+        <!--Div containing company story-->
+        <div class="story" id="story">
+            <h2>Our Story</h2>
+            <div class="story-wrapper">
+                <article class="story-left-text">
+                    <strong>About Us - Nectar: Where Flavor Meets Well-Being</strong>
+                    <p>At Nectar, we've embarked on a journey to redefine refreshment. We've crafted a unique line of beverages that combine the subtle sweetness of nature with the goodness of hemp extract and adaptogens. Our mission is to create a drink that not only tantalizes your taste buds but also nurtures your well-being, all while embodying the vibrant energy of Western Australia's sunny lifestyle.</p>
+                    <strong>Our Story</strong>
+                    <p>Born amidst the picturesque landscapes of Margaret River, Western Australia, Nectar drinks are the embodiment of a vision to provide a refreshing and health-conscious option for our local community. We've dedicated ourselves to perfecting every sip, ensuring that you experience a sense of calm and rejuvenation with each bottle.</p>
+                    <strong>Beyond Beverages</strong>
+                    <p>Our commitment extends beyond crafting the perfect beverage. It's about connecting with our community. While you won't find Nectar products available for purchase on our website (they're readily available at your favorite local supermarkets and cafes), this space serves as a hub of information and inspiration. It's where you can delve deeper into our story, discover the secrets behind our delightful flavors, and immerse yourself in the lifestyle Nectar embodies.</p>
+                </article>
+                <figure class="story-right">
+                    <!--Kaboompics, Karolina /. 2019. “Download Premium Image of Sun Shining on the Lemon Tree by Karolina / Kaboompics about Lemon, Summer, Yellow, Citrus, and Agriculture 937559.” Rawpixel. https://www.rawpixel.com/image/937559/lemon-orchard.  -->
+                    <img src="media/Lemon-Orchard.jpg" alt="Fruit Orchard">
+                </figure>
+            </div>
+            <div class="story-wrapper">
+                <article class="story-right-text">
+                    <strong>The Nectar Experience</strong>
+                    <p>As you explore our website, you'll notice the embodiment of our brand's tone of voice in every design element. The vibrant and youthful energy of Western Australia is seamlessly integrated into the website's look and feel. We aim to provide a professional and reliable image, assuring our visitors that Nectar is a brand they can trust.</p>
+                    <strong>Setting Ourselves Apart</strong>
+                    <p>In the crowded market of healthy beverages, what sets us apart is our unwavering commitment to delivering a product that doesn't just quench your thirst but elevates your overall well-being. Our website features captivating imagery that reflects our unique blend of natural ingredients and the sunny, lively spirit of WA.</p>
+                    <strong>Join the Nectar Community</strong><br>
+                    <p>Whether you're a loyal fan or just discovering us for the first time, our website offers the perfect blend of visuals and textual content to provide you with the information you need. We invite you to explore, learn, and become a part of the Nectar community.</p>
+                    <p>Nectar - Where Flavor Meets Well-Being, and Nature Meets Nurture.</p>
+                </article>
+                <figure class="story-left">
+                    <!--Lasthib, Contributors to Wikimedia. 2016. “File:2016 Margaret River Australia. Cheeky Monkey Brewery. Brewers of Craft Beers and Ciders.Jpg.” Wikimedia Commons. Wikimedia Foundation, Inc. December 23. https://commons.wikimedia.org/wiki/File:2016_Margaret_River_Australia._Cheeky_monkey_brewery._Brewers_of_craft_beers_and_ciders.jpg. -->
+                    <img src="media/2016_Margaret_River_Australia._Cheeky_monkey_brewery._Brewers_of_craft_beers_and_ciders.jpg" alt="Cheeky Monkey Brewery">
+                </figure>
+            </div>
+        </div>
+        <!--Div containing border image-->
+        <div class="border">
+        </div>
         <!--Div containing Product Range-->
         <!--Code Adapted from Rendle, Robin. 2020. “Stacked Cards with Sticky Positioning and a Dash of Sass: CSS-Tricks.” CSS. August 13. https://css-tricks.com/stacked-cards-with-sticky-positioning-and-a-dash-of-sass/.  -->
         <div class="products" id="products">
@@ -158,319 +149,289 @@ function closeNav() {
                 <div class="card">
                     <figure class="left">
                         <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
-                  <img src="media/Nectar-Lemonade.png" alt="Nectar-Lemonade" height="300">  
-                </figure>
-                <article class="right">
-                  <h2><span>Nectar</span> Lemonade</h2>
-                  <p>Nectar's lemon drink is a blend of locally sourced ingredients and wellness-enhancing elements, all crafted with care to offer a delightful and refreshing beverage.</p>
-
-                  <p>Ingredients:<br>
-                    <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. -->
-                    &#10087; Fresh Lemons: Sourced locally to capture the essence of Western Australia's vibrant citrus flavors.<br>
-                    &#10087; Hemp Extract: Carefully extracted to infuse the drink with its natural goodness.<br>
-                    &#10087; Adaptogens: Expertly chosen to promote a calm state of mind.<br>
-                    &#10087; Sparkling Water: Adds the perfect amount of fizz to make each sip refreshing.<br>
-                    &#10087; Natural Sweetener: Just a touch to enhance the sweetness.<br>
-                    &#10087; Love and Care: Crafted with passion and attention to detail in Margaret River, WA.</p>
-                </article>
-            </div>
-            <!--Vertical stacking card that contains the product image, description and ingredients list for Nectar Blood Orange-->
+                        <img src="media/Nectar-Lemonade.png" alt="Nectar-Lemonade" height="300">
+                    </figure>
+                    <article class="right">
+                        <h2><span>Nectar</span> Lemonade</h2>
+                        <p>Nectar's lemon drink is a blend of locally sourced ingredients and wellness-enhancing elements, all crafted with care to offer a delightful and refreshing beverage.</p>
+                        <p>Ingredients:<br>
+                            <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. --> &#10087; Fresh Lemons: Sourced locally to capture the essence of Western Australia's vibrant citrus flavors.<br> &#10087; Hemp Extract: Carefully extracted to infuse the drink with its natural goodness.<br> &#10087; Adaptogens: Expertly chosen to promote a calm state of mind.<br> &#10087; Sparkling Water: Adds the perfect amount of fizz to make each sip refreshing.<br> &#10087; Natural Sweetener: Just a touch to enhance the sweetness.<br> &#10087; Love and Care: Crafted with passion and attention to detail in Margaret River, WA.
+                        </p>
+                    </article>
+                </div>
+                <!--Vertical stacking card that contains the product image, description and ingredients list for Nectar Blood Orange-->
                 <div class="card">
                     <figure class="left">
                         <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
-                   <img src="media/Nectar-BloodOrange.png" alt="Nectar-BloodOrange" height="300"> 
-                </figure>
-                   <article class="right">
-                  <h2><span>Nectar</span> Blood Orange</h2>
-                  <p>Nectar's blood orange drink is crafted with a blend of these high-quality ingredients to deliver a delicious, refreshing, and health-conscious beverage for the youthful and energetic individuals of Western Australia.</p>
-
-
-                <p>Ingredients:<br>
-                    <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. -->
-                    &#10087; Blood Orange Juice: Freshly squeezed blood oranges are the star ingredient, providing a natural and vibrant flavor.<br>
-                    &#10087; Hemp Extract: Nectar drinks feature hemp extract, adding a unique twist to the beverage while contributing to well-being.<br>
-                    &#10087; Adaptogens: These natural substances are included to help promote a calm state of mind, creating a harmonious experience.<br>
-                    &#10087; Sparkling Water: To give the drink a bubbly and refreshing quality, sparkling water is used.<br>
-                    &#10087; Natural Sweetener: A touch of natural sweetener is added to enhance the sweetness without excessive sugar.<br>
-                    &#10087; Citrus Zest: The zest from blood oranges is used to add a citrusy aroma and depth of flavor.<br>
-                    &#10087; Preservatives: Safe and natural preservatives are included to ensure the product's shelf life and quality.</p>
-                </article>
-            </div>
-            <!--Vertical stacking card that contains the product image, description and ingredients list for Nectar Pink Lemonade-->
+                        <img src="media/Nectar-BloodOrange.png" alt="Nectar-BloodOrange" height="300">
+                    </figure>
+                    <article class="right">
+                        <h2><span>Nectar</span> Blood Orange</h2>
+                        <p>Nectar's blood orange drink is crafted with a blend of these high-quality ingredients to deliver a delicious, refreshing, and health-conscious beverage for the youthful and energetic individuals of Western Australia.</p>
+                        <p>Ingredients:<br>
+                            <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. --> &#10087; Blood Orange Juice: Freshly squeezed blood oranges are the star ingredient, providing a natural and vibrant flavor.<br> &#10087; Hemp Extract: Nectar drinks feature hemp extract, adding a unique twist to the beverage while contributing to well-being.<br> &#10087; Adaptogens: These natural substances are included to help promote a calm state of mind, creating a harmonious experience.<br> &#10087; Sparkling Water: To give the drink a bubbly and refreshing quality, sparkling water is used.<br> &#10087; Natural Sweetener: A touch of natural sweetener is added to enhance the sweetness without excessive sugar.<br> &#10087; Citrus Zest: The zest from blood oranges is used to add a citrusy aroma and depth of flavor.<br> &#10087; Preservatives: Safe and natural preservatives are included to ensure the product's shelf life and quality.
+                        </p>
+                    </article>
+                </div>
+                <!--Vertical stacking card that contains the product image, description and ingredients list for Nectar Pink Lemonade-->
                 <div class="card">
                     <figure class="left">
                         <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
-                  <img src="media/Nectar-PinkLemonade.png" alt="Nectar-PinkLemonade" height="300">  
-                </figure>
-                <article class="right">
-                  <h2><span>Nectar</span> Pink Lemonade</h2>
-                  <p><p>Nectar Pink Lemonade is a delightful blend of natural ingredients, carefully selected to create a drink that embodies the youthful, summery energy of Western Australia. It's a refreshing choice that's not only delicious but also promotes a calm state of mind.</p>
-
-                  <p>Ingredients:<br>
-                    <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. -->
-                  &#10087; Freshly Squeezed Pink Lemons: The vibrant and tangy flavor of pink lemons is the star of our pink lemonade.<br>
-                  &#10087; Pure Spring Water: We use the purest spring water to create the refreshing base for our drink.<br>
-                  &#10087; Hemp Extract: Our secret ingredient, hemp extract, adds a subtle earthy note and promotes relaxation.<br>
-                  &#10087; Adaptogens: These natural herbs and plants help to enhance your well-being and create a sense of calm.<br>
-                  &#10087; Cane Sugar: A touch of cane sugar provides just the right amount of sweetness to balance the tartness of the lemons.<br>
-                  &#10087; Natural Fruit Extracts: We use natural fruit extracts to enhance the fruity flavors and create a delightful taste.<br>
-                  &#10087; Citrus Zest: A hint of citrus zest adds extra zing and aroma to our pink lemonade.</p>
-                  </p>
-                </article>
+                        <img src="media/Nectar-PinkLemonade.png" alt="Nectar-PinkLemonade" height="300">
+                    </figure>
+                    <article class="right">
+                        <h2><span>Nectar</span> Pink Lemonade</h2>
+                        <p>
+                        <p>Nectar Pink Lemonade is a delightful blend of natural ingredients, carefully selected to create a drink that embodies the youthful, summery energy of Western Australia. It's a refreshing choice that's not only delicious but also promotes a calm state of mind.</p>
+                        <p>Ingredients:<br>
+                            <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. --> &#10087; Freshly Squeezed Pink Lemons: The vibrant and tangy flavor of pink lemons is the star of our pink lemonade.<br> &#10087; Pure Spring Water: We use the purest spring water to create the refreshing base for our drink.<br> &#10087; Hemp Extract: Our secret ingredient, hemp extract, adds a subtle earthy note and promotes relaxation.<br> &#10087; Adaptogens: These natural herbs and plants help to enhance your well-being and create a sense of calm.<br> &#10087; Cane Sugar: A touch of cane sugar provides just the right amount of sweetness to balance the tartness of the lemons.<br> &#10087; Natural Fruit Extracts: We use natural fruit extracts to enhance the fruity flavors and create a delightful taste.<br> &#10087; Citrus Zest: A hint of citrus zest adds extra zing and aroma to our pink lemonade.
+                        </p>
+                        </p>
+                    </article>
                 </div>
                 <!--Vertical stacking card that contains the product image, description and ingredients list for Nectar Raspberry-->
                 <div class="card">
-                  <figure class="left">
-                    <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
-                  <img src="media/Nectar-Raspberry.png" alt="Nectar-Raspberry" height="300">
-                  </figure>
-                  <article class="right">
-                  <h2><span>Nectar</span> Raspberry</h2>
-                  <p><p>Nectar Raspberry Drink embodies the essence of nature and well-being with a touch of youthful energy.</p>
-
-                  <p>Ingredients:<br>
-                    <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. -->
-                  &#10087; Raspberry Puree: Freshly sourced ripe raspberries to impart natural sweetness and a vibrant pink hue.<br>
-                  &#10087; Hemp Extract: Premium hemp extract for added richness and wellness benefits.<br>
-                  &#10087; Adaptogens: A unique blend of adaptogenic herbs like Ashwagandha and Ginseng to promote relaxation and mental balance.<br>
-                  &#10087; Carbonated Water: Sparkling water to give the drink its delightful fizz.<br>
-                  &#10087; Natural Sweeteners: A touch of natural sweeteners such as agave nectar or honey to enhance the taste.<br>
-                  &#10087; Citrus Zest: A hint of citrus zest for a refreshing twist.<br>
-                  &#10087; Natural Flavors: All-natural flavor extracts to enhance the raspberry experience.<br>
-                  &#10087; Preservatives: Minimal, safe preservatives to ensure product freshness.<br>
-                  &#10087; Love and Care: Crafted with passion and precision in Margaret River, WA.</p>
-                  </p>
-                </article>
+                    <figure class="left">
+                        <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
+                        <img src="media/Nectar-Raspberry.png" alt="Nectar-Raspberry" height="300">
+                    </figure>
+                    <article class="right">
+                        <h2><span>Nectar</span> Raspberry</h2>
+                        <p>
+                        <p>Nectar Raspberry Drink embodies the essence of nature and well-being with a touch of youthful energy.</p>
+                        <p>Ingredients:<br>
+                            <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. --> &#10087; Raspberry Puree: Freshly sourced ripe raspberries to impart natural sweetness and a vibrant pink hue.<br> &#10087; Hemp Extract: Premium hemp extract for added richness and wellness benefits.<br> &#10087; Adaptogens: A unique blend of adaptogenic herbs like Ashwagandha and Ginseng to promote relaxation and mental balance.<br> &#10087; Carbonated Water: Sparkling water to give the drink its delightful fizz.<br> &#10087; Natural Sweeteners: A touch of natural sweeteners such as agave nectar or honey to enhance the taste.<br> &#10087; Citrus Zest: A hint of citrus zest for a refreshing twist.<br> &#10087; Natural Flavors: All-natural flavor extracts to enhance the raspberry experience.<br> &#10087; Preservatives: Minimal, safe preservatives to ensure product freshness.<br> &#10087; Love and Care: Crafted with passion and precision in Margaret River, WA.
+                        </p>
+                        </p>
+                    </article>
                 </div>
                 <!--Vertical stacking card that contains the product image, description and ingredients list for Nectar Pineapple-->
                 <div class="card">
                     <figure class="left">
                         <!--Image created by Claire Banville, lable created on Canva and added to can stock image through photoshop-->
-                  <img src="media/Nectar-Pineapple.png" alt="Nectar-Pineapple" height="300">  
-                </figure>
-                <article class="right">
-                  <h2><span>Nectar</span> Pineapple</h2>
-                  <p><p>This ingredient list reflects the youthful, summery, and health-focused nature of Nectar's beverages, offering a delicious and refreshing option for consumers in Western Australia.</p>
-
-                  <p>Ingredients:<br>
-                  <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. -->
-                  &#10087; Fresh Pineapple Juice: Sourced from ripe pineapples, providing natural sweetness and a tropical flavor.<br>
-                  &#10087; Hemp Extract: Infused for a subtle calming effect.<br>
-                  &#10087; Adaptogens Blend: A unique mix of adaptogenic herbs like Ashwagandha and Ginseng to promote well-being.<br>
-                  &#10087; Sparkling Water: For a refreshing and bubbly experience.<br>
-                  &#10087; Natural Sweetener (if needed): Just a touch of a natural sweetener like honey or agave for balance.</p>
-                  </p>
-                </article>
+                        <img src="media/Nectar-Pineapple.png" alt="Nectar-Pineapple" height="300">
+                    </figure>
+                    <article class="right">
+                        <h2><span>Nectar</span> Pineapple</h2>
+                        <p>
+                        <p>This ingredient list reflects the youthful, summery, and health-focused nature of Nectar's beverages, offering a delicious and refreshing option for consumers in Western Australia.</p>
+                        <p>Ingredients:<br>
+                            <!--“Rotated Floral Heart Bullet: UTF-8 Icons.” 2023. UTF. UTF-8 Icons. Accessed November 21. https://www.utf8icons.com/character/10087/rotated-floral-heart-bullet. --> &#10087; Fresh Pineapple Juice: Sourced from ripe pineapples, providing natural sweetness and a tropical flavor.<br> &#10087; Hemp Extract: Infused for a subtle calming effect.<br> &#10087; Adaptogens Blend: A unique mix of adaptogenic herbs like Ashwagandha and Ginseng to promote well-being.<br> &#10087; Sparkling Water: For a refreshing and bubbly experience.<br> &#10087; Natural Sweetener (if needed): Just a touch of a natural sweetener like honey or agave for balance.
+                        </p>
+                        </p>
+                    </article>
                 </div>
+            </div>
         </div>
-        </div>
-<!--Div containing border image-->
+        <!--Div containing border image-->
         <div class="border">
         </div>
         <!--Div containing stockists-->
-        
-    <div class="stockist"  id="stockist">
+        <div class="stockist" id="stockist">
             <h2>Stockists</h2>
-        <div class="stockists" id="stockists">
-            <!--Buttscell. 2023. “Supermarket Cartoon - Unlimited Download. Cleanpng.Com.” Cleanpng.Com. Accessed October 19. https://www.cleanpng.com/png-coles-supermarkets-toombul-shopping-centre-retail-1024531/download-png.html.  -->
-            <figure class="logo" id="coles"><img src="media/coles-logo-2.png" alt="coles logo"/></figure>
-            <!--Teelisa. 2023. “Green Circle - Unlimited Download. Cleanpng.Com.” Cleanpng.Com. Accessed October 19. https://www.cleanpng.com/png-woolworths-supermarkets-australia-logo-coles-super-1224919/download-png.html.  -->
-            <figure class="logo" id="woolworths"><img src="media\woolworths-logo.png" alt="woolworths logo"/></figure>
-            <!--Sinky. 2023. “Upload &amp; Discover PNG Files without a Hitch!” CleanPNG. Accessed October 19. https://www.cleanpng.com/png-aldi-grocery-store-supermarket-chicago-company-ald-6237642/download-png.html.  -->
-            <figure class="logo" id="aldi"><img src="media\aldi-logo.png" alt="aldi logo"/></figure>
-            <!--“White Elephant Cafe - Margaret River Cafe: Best Cafe in Margaret River: Beach Cafe: Margaret River Coffee - Home.” 2023. White Elephant. Accessed October 19. https://www.whiteelephantcafe.com.au/. -->
-            <figure class="logo" id="whiteelephant"><img src="media\WE-logo-with-circle.jpg" alt="The White Elephant Cafe logo"/></figure>
-            <!--“Wild and Woods Cafe.” 2023. Wildandwoods. Accessed October 19. https://www.wildandwoods.com.au/.  -->
-            <figure class="logo" id="wildwoods"><img src="media\W&W-Logo.jpg" alt="WILD & WOODS CAFE logo"/></figure>
+            <div class="stockists" id="stockists">
+                <!--Buttscell. 2023. “Supermarket Cartoon - Unlimited Download. Cleanpng.Com.” Cleanpng.Com. Accessed October 19. https://www.cleanpng.com/png-coles-supermarkets-toombul-shopping-centre-retail-1024531/download-png.html.  -->
+                <figure class="logo" id="coles"><img src="media/coles-logo-2.png" alt="coles logo" /></figure>
+                <!--Teelisa. 2023. “Green Circle - Unlimited Download. Cleanpng.Com.” Cleanpng.Com. Accessed October 19. https://www.cleanpng.com/png-woolworths-supermarkets-australia-logo-coles-super-1224919/download-png.html.  -->
+                <figure class="logo" id="woolworths"><img src="media\woolworths-logo.png" alt="woolworths logo" /></figure>
+                <!--Sinky. 2023. “Upload &amp; Discover PNG Files without a Hitch!” CleanPNG. Accessed October 19. https://www.cleanpng.com/png-aldi-grocery-store-supermarket-chicago-company-ald-6237642/download-png.html.  -->
+                <figure class="logo" id="aldi"><img src="media\aldi-logo.png" alt="aldi logo" /></figure>
+                <!--“White Elephant Cafe - Margaret River Cafe: Best Cafe in Margaret River: Beach Cafe: Margaret River Coffee - Home.” 2023. White Elephant. Accessed October 19. https://www.whiteelephantcafe.com.au/. -->
+                <figure class="logo" id="whiteelephant"><img src="media\WE-logo-with-circle.jpg" alt="The White Elephant Cafe logo" /></figure>
+                <!--“Wild and Woods Cafe.” 2023. Wildandwoods. Accessed October 19. https://www.wildandwoods.com.au/.  -->
+                <figure class="logo" id="wildwoods"><img src="media\W&W-Logo.jpg" alt="WILD & WOODS CAFE logo" /></figure>
+            </div>
         </div>
-    </div>
-<!--Div containing border image-->
-    <div class="border">
-    </div>
+        <!--Div containing border image-->
+        <div class="border">
+        </div>
         <!--Div containing contact information-->
         <div class="contact" id="contact">
             <!--Thank you message div that will appear for 6 seconds after form has been submitted-->
             <div class="contact-wrapper">
                 <h2>Contact</h2>
                 <div class="contact-card">
-                    <p id="thank-you-message">
-                        Thank you for contacting us. We will be in touch with you very soon.
-                      </p>
-    <form>
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" placeholder="John Doe"><br><br>
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email" placeholder="example@example.com"><br><br>
-    <label for="reason">Enquiry:</label><br>
-    <select id="reason" name="reason">
-    <option value="null"></option>
-    <option value="merchant">Become a Merchant</option>
-    <option value="stockists">Stockists Information</option>
-    <option value="media">Media Enquiry</option>
-    <option value="general">General Enquiry</option>
-    </select><br><br>
-    <label for="message">Message:</label><br>
-    <textarea name="message" id="message" rows="10" cols="30" placeholder="Type Message Here....."></textarea><br><br>
-    <!--On submition of contact form a thank you message will appear for 6 seconds before reverting back to show a reset form-->
-    <input id="submit" type="submit" aria-label="submit" value="Submit" onclick="myFunction()">
-  </form> 
-</div>
-</div>
-            
+                    <p id="thank-you-message"> Thank you for contacting us. We will be in touch with you very soon. </p>
+                    <form>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="John Doe"><br><br>
+                        <label for="email">Email:</label><br>
+                        <input type="text" id="email" name="email" placeholder="example@example.com"><br><br>
+                        <label for="reason">Enquiry:</label><br>
+                        <select id="reason" name="reason">
+                            <option value="null"></option>
+                            <option value="merchant">Become a Merchant</option>
+                            <option value="stockists">Stockists Information</option>
+                            <option value="media">Media Enquiry</option>
+                            <option value="general">General Enquiry</option>
+                        </select><br><br>
+                        <label for="message">Message:</label><br>
+                        <textarea name="message" id="message" rows="10" cols="30" placeholder="Type Message Here....."></textarea><br><br>
+                        <!--On submition of contact form a thank you message will appear for 6 seconds before reverting back to show a reset form-->
+                        <input id="submit" type="submit" aria-label="submit" value="Submit" onclick="myFunction()">
+                    </form>
+                </div>
+            </div>
         </div>
-</main>
+    </main>
     <footer>
-    <!--Footer table for desktop and tablet screens-->
-    <table class="standard-table">
-        <thead>
-        <tr>
-            <th>Stockists</th>
-            <th>Contacts</th>
-            <th>Community</th>
-            <th>Help and Advice</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Coles</td>
-            <td>Media Enquiry's</td>
-            <td>About Us</td>
-            <td>FAQ's</td>
-        </tr>
-        <tr>
-            <td>Woolworths</td>
-            <td><address> 123 Blossom Lane, Margaret River, WA 6285</address></td>
-            <td>Facebook</td>
-            <td>Terms and Conditions</td>
-        </tr>
-        <tr>
-            <td>Aldi</td>
-            <td><phone>(08) 1234 5678</phone></td>
-            <td>X</td>
-            <td>Privacy Policy</td>
-        </tr>
-        <tr>
-            <td>The White Elephant Cafe</td>
-            <td><email>info@nectarorchard.com.au</email></td>
-            <td>Instagram</td>
-        </tr>
-        <tr>
-            <td>WILD & WOODS CAFE</td>
-        </tr>
-       </tbody>
-    </table>
-<!--Footer table updated for mobile perspective to make it more compact and less noisy for smaller screens-->
-    <div class="mobile-table">
-        <details>
-            <summary>Stockists</summary>
-            <table>
-               <tbody>
-                    <tr>
-                        <td>Coles</td>
-                    </tr>
-                    <tr>
-                        <td>Woolworths</td>
-                    </tr>
-                    <tr>
-                        <td>Aldi</td>
-                    </tr>
-                    <tr>
-                        <td>The White Elephant Cafe</td>
-                    </tr>
-                    <tr>
-                        <td>WILD & WOODS CAFE</td>
-                    </tr>
-                   </tbody>
-                   </table>
-            </details>
-            
+        <!--Footer table for desktop and tablet screens-->
+        <table class="standard-table">
+            <thead>
+                <tr>
+                    <th>Stockists</th>
+                    <th>Contacts</th>
+                    <th>Community</th>
+                    <th>Help and Advice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coles</td>
+                    <td>Media Enquiry's</td>
+                    <td>About Us</td>
+                    <td>FAQ's</td>
+                </tr>
+                <tr>
+                    <td>Woolworths</td>
+                    <td>
+                        <address> 123 Blossom Lane, Margaret River, WA 6285</address>
+                    </td>
+                    <td>Facebook</td>
+                    <td>Terms and Conditions</td>
+                </tr>
+                <tr>
+                    <td>Aldi</td>
+                    <td>
+                        <phone>(08) 1234 5678</phone>
+                    </td>
+                    <td>X</td>
+                    <td>Privacy Policy</td>
+                </tr>
+                <tr>
+                    <td>The White Elephant Cafe</td>
+                    <td>
+                        <email>info@nectarorchard.com.au</email>
+                    </td>
+                    <td>Instagram</td>
+                </tr>
+                <tr>
+                    <td>WILD & WOODS CAFE</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Footer table updated for mobile perspective to make it more compact and less noisy for smaller screens-->
+        <div class="mobile-table">
             <details>
-            <summary>Contacts</summary>
-            <table>
-               <tbody>
-                    <tr>
-                        <td>Media Enquiry's</td>
-                    </tr>
-                    <tr>
-                        <td><address> 123 Blossom Lane, Margaret River, WA 6285</address></td>
-                    </tr>
-                    <tr>
-                        <td><phone>(08) 1234 5678</phone></td>
-                    </tr>
-                    <tr>
-                        <td><email>info@nectarorchard.com.au</email></td>
-                    </tr>
-                   </tbody>
-                   </table>
+                <summary>Stockists</summary>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Coles</td>
+                        </tr>
+                        <tr>
+                            <td>Woolworths</td>
+                        </tr>
+                        <tr>
+                            <td>Aldi</td>
+                        </tr>
+                        <tr>
+                            <td>The White Elephant Cafe</td>
+                        </tr>
+                        <tr>
+                            <td>WILD & WOODS CAFE</td>
+                        </tr>
+                    </tbody>
+                </table>
             </details>
-            
             <details>
-            <summary>Community</summary>
-            <table>
-                  <tbody>
-                    <tr>
-                        <td>About Us</td>
-                    </tr>
-                    <tr>
-                        <td>Facebook</td>
-                    </tr>
-                    <tr>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td>Instagram</td>
-                    </tr>
-                   </tbody>
-                   </table>
+                <summary>Contacts</summary>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Media Enquiry's</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <address> 123 Blossom Lane, Margaret River, WA 6285</address>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <phone>(08) 1234 5678</phone>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <email>info@nectarorchard.com.au</email>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </details>
-            
             <details>
-            <summary>Help and Advice</summary>
-            <table>
-                 <tbody>
-                    <tr>
-                        <td>FAQ's</td>
-                    </tr>
-                    <tr>
-                        <td>Terms and Conditions</td>
-                    </tr>
-                    <tr>
-                        <td>Privacy Policy</td>
-                    </tr>
-                   </tbody>
-                   </table>
+                <summary>Community</summary>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>About Us</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+            <details>
+                <summary>Help and Advice</summary>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>FAQ's</td>
+                        </tr>
+                        <tr>
+                            <td>Terms and Conditions</td>
+                        </tr>
+                        <tr>
+                            <td>Privacy Policy</td>
+                        </tr>
+                    </tbody>
+                </table>
             </details>
         </div>
+        <div class="certifications">
+            <!--Wheeler, Mike. 2019. “Aus-Qual Certification Body Extends Offering.” Food &amp; Beverage Industry News. December 8. https://www.foodmag.com.au/aus-qual-certification-body-extends-offering/.  -->
+            <img src="media\AustralianColour.jpg" alt="Organic logo" height="133" class="organic">
+            <!--Skinns, Dylan. 2023. “Product of Australia.” The Australian Made Campaign. Accessed November 5. https://australianmade.com.au/.-->
+            <img src="media\productofaustralialogo.jpg" alt="Product of Australia logo" class="product-of-australia">
+        </div>
+        <section style="height: 40px;">
+            <p>Nectar &#174;&#8482; | Terms and Conditions | Privacy Policy</p>
+        </section>
+    </footer>
+    <script>
+        const detailsElements = document.querySelectorAll("details");
 
-    <div class="certifications">
-        <!--Wheeler, Mike. 2019. “Aus-Qual Certification Body Extends Offering.” Food &amp; Beverage Industry News. December 8. https://www.foodmag.com.au/aus-qual-certification-body-extends-offering/.  -->
-<img src="media\AustralianColour.jpg" alt="Organic logo" height="133" class="organic">
-<!--Skinns, Dylan. 2023. “Product of Australia.” The Australian Made Campaign. Accessed November 5. https://australianmade.com.au/.-->
-<img src="media\productofaustralialogo.jpg" alt="Product of Australia logo" class="product-of-australia">
-</div>
-<section style="height: 40px;">
-<p>Nectar &#174;&#8482; | Terms and Conditions | Privacy Policy</p>
-</section>
-</footer>
-<script>
-
-    const detailsElements = document.querySelectorAll("details");
-    
-    function handleClickOnDetails() {
-      // close all details
-      let detailsOpened = document.querySelectorAll("details[open]");
-    
-      for (const item of detailsOpened) {
-        // keep open only details clicked
-        if (this != item) {
-          item.removeAttribute("open");
+        function handleClickOnDetails() {
+            // close all details
+            let detailsOpened = document.querySelectorAll("details[open]");
+            for (const item of detailsOpened) {
+                // keep open only details clicked
+                if (this != item) {
+                    item.removeAttribute("open");
+                }
+            }
         }
-      }
-    }
-    
-    detailsElements.forEach(function (item) {
-      item.addEventListener("click", handleClickOnDetails);
-    });
+        detailsElements.forEach(function(item) {
+            item.addEventListener("click", handleClickOnDetails);
+        });
     </script>
- </body> 
+</body>
+
 </html>
