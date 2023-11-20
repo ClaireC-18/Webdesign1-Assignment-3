@@ -317,6 +317,17 @@ height:450px;
 #message{
   width: 400px;
 }
+
+#submit{
+  background: linear-gradient(45deg, #ededed, #bdbdbd);
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+  font-family: 'AvenirNext-UltraLight';
+  font-size: 18px;
+  font-weight: 600;
+}
+
 /*On submittion the user will be presented a tank you message that will time out after 6 seconds*/
 #thank-you-message {
   display: none;
